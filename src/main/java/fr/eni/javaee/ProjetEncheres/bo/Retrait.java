@@ -1,5 +1,7 @@
 package fr.eni.javaee.ProjetEncheres.bo;
 
+import java.util.Objects;
+
 public class Retrait {
 		private String rue;
 		private int code_postal;
@@ -51,6 +53,27 @@ public class Retrait {
 			builder.append("]");
 			return builder.toString();
 		}
+		
+		//Equals et HashCode
+		@Override
+		public int hashCode() {
+			return Objects.hash(code_postal, rue, ville);
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Retrait other = (Retrait) obj;
+			return code_postal == other.code_postal && Objects.equals(rue, other.rue)
+					&& Objects.equals(ville, other.ville);
+		}
+		
+		
 		
 		
 		

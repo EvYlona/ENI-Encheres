@@ -1,6 +1,7 @@
 package fr.eni.javaee.ProjetEncheres.bo;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class ArticleVendu extends Utilisateurs {
 	public int  noArticle;
@@ -91,16 +92,54 @@ public class ArticleVendu extends Utilisateurs {
 	}
 	
 	
+	//ToString
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("ArticleVendu [noArticle=");
+		builder.append(noArticle);
+		builder.append(", nomArticle=");
+		builder.append(nomArticle);
+		builder.append(", description=");
+		builder.append(description);
+		builder.append(", dateDebutEncheres=");
+		builder.append(dateDebutEncheres);
+		builder.append(", dateFinEncheres=");
+		builder.append(dateFinEncheres);
+		builder.append(", miseAPrix=");
+		builder.append(miseAPrix);
+		builder.append(", prixVente=");
+		builder.append(prixVente);
+		builder.append(", etatVente=");
+		builder.append(etatVente);
+		builder.append("]");
+		return builder.toString();
+	}
 	
+	//Equals et HashCode
+	@Override
+	public int hashCode() {
+		return Objects.hash(dateDebutEncheres, dateFinEncheres, description, etatVente, miseAPrix, noArticle,
+				nomArticle, prixVente);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ArticleVendu other = (ArticleVendu) obj;
+		return Objects.equals(dateDebutEncheres, other.dateDebutEncheres)
+				&& Objects.equals(dateFinEncheres, other.dateFinEncheres)
+				&& Objects.equals(description, other.description) && Objects.equals(etatVente, other.etatVente)
+				&& miseAPrix == other.miseAPrix && noArticle == other.noArticle
+				&& Objects.equals(nomArticle, other.nomArticle) && prixVente == other.prixVente;
+	}
 	
+
 	
-	
-	
-		
-		
-		
-		
-		
-		
 }
 

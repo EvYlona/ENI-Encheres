@@ -1,5 +1,7 @@
 package fr.eni.javaee.ProjetEncheres.bo;
 
+import java.util.Objects;
+
 public class Utilisateurs {
 	//Attributs
 	private int noUtilisateur;
@@ -131,5 +133,64 @@ public class Utilisateurs {
 	public void setAdministrateur(String administrateur) {
 		this.administrateur = administrateur;
 	}
+	
+	//ToString
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Utilisateurs [noUtilisateur=");
+		builder.append(noUtilisateur);
+		builder.append(", pseudo=");
+		builder.append(pseudo);
+		builder.append(", nom=");
+		builder.append(nom);
+		builder.append(", prenom=");
+		builder.append(prenom);
+		builder.append(", email=");
+		builder.append(email);
+		builder.append(", telephone=");
+		builder.append(telephone);
+		builder.append(", rue=");
+		builder.append(rue);
+		builder.append(", codePostal=");
+		builder.append(codePostal);
+		builder.append(", ville=");
+		builder.append(ville);
+		builder.append(", motDePasse=");
+		builder.append(motDePasse);
+		builder.append(", credit=");
+		builder.append(credit);
+		builder.append(", administrateur=");
+		builder.append(administrateur);
+		builder.append("]");
+		return builder.toString();
+	}
+
+	//Equals et HashCode
+	@Override
+	public int hashCode() {
+		return Objects.hash(administrateur, codePostal, credit, email, motDePasse, noUtilisateur, nom, prenom, pseudo,
+				rue, telephone, ville);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Utilisateurs other = (Utilisateurs) obj;
+		return Objects.equals(administrateur, other.administrateur) && Objects.equals(codePostal, other.codePostal)
+				&& credit == other.credit && Objects.equals(email, other.email)
+				&& Objects.equals(motDePasse, other.motDePasse) && noUtilisateur == other.noUtilisateur
+				&& Objects.equals(nom, other.nom) && Objects.equals(prenom, other.prenom)
+				&& Objects.equals(pseudo, other.pseudo) && Objects.equals(rue, other.rue)
+				&& Objects.equals(telephone, other.telephone) && Objects.equals(ville, other.ville);
+	}
+	
+	
+	
 	
 }

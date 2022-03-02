@@ -1,6 +1,7 @@
 package fr.eni.javaee.ProjetEncheres.bo;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Categorie extends ArticleVendu {
 		//Attributs
@@ -32,6 +33,41 @@ public class Categorie extends ArticleVendu {
 		public void setLibelle(int libelle) {
 			this.libelle = libelle;
 		}
+		
+		//ToString
+		@Override
+		public String toString() {
+			StringBuilder builder = new StringBuilder();
+			builder.append("Categorie [noCategorie=");
+			builder.append(noCategorie);
+			builder.append(", libelle=");
+			builder.append(libelle);
+			builder.append("]");
+			return builder.toString();
+		}
+		
+		//Equals et HashCode
+		@Override
+		public int hashCode() {
+			return Objects.hash(libelle, noCategorie);
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Categorie other = (Categorie) obj;
+			return libelle == other.libelle && noCategorie == other.noCategorie;
+		}
+		
+		
+		
+		
+		
 		
 		
 		
