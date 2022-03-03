@@ -10,19 +10,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class PageCreerCompteServlet
+ * Servlet implementation class PageAcquisitionServlet
  */
-@WebServlet("/pageCreerCompte")
-public class PageCreerCompteServlet extends HttpServlet {
+@WebServlet("/PageAcquisition")
+public class PageAcquisitionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/PageCreerCompte.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/PageAcquisition.jsp");
 		rd.forward(request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);

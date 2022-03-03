@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1"
+	name="viewport" />
 <!-- Bootstrap CSS -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -27,6 +29,22 @@
 <style>
 
 /* Penser mobile first */
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	body {
+
+	}
+	header {
+		margin-top:20px;
+		font-size:1.3rem;
+		margin-left:50px;
+	}
+	
+}
+
+
+
+
 h1 {
 	font-size: 4rem;
 	margin-left: 50px;
@@ -43,9 +61,8 @@ h2 {
 	font-size:2rem;
 	margin-top:60px;
 	height:40px;
-	text-align:center;
+	text-align:right;
 }
-
 
 form {
     display: inline-block;
@@ -91,7 +108,7 @@ form {
 		</header>
 
 		<section id="main">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
 					<h2 align="center">Creer un compte</h2>
 				</div>
@@ -100,14 +117,14 @@ form {
 						<div class="row g-3">
 						<!-- Pseudo -->
 							<div class="col-sm-6 col-lg-3">
-								<label for="pseudo" class="col-form-label">Pseudo</label>
+								<label for="pseudo" class="col-form-label">Pseudo:</label>
 							</div>
 							<div class="col-sm-6 col-lg-3">
 								<input type="text" id="pseudo" class="form-control">
 							</div>
 						<!-- Nom -->
 							<div class="col-sm-6 col-lg-3">
-								<label for="inputPassword6" class="col-form-label">Nom</label>
+								<label for="inputPassword6" class="col-form-label">Nom:</label>
 							</div>
 							<div class="col-sm-6 col-lg-3">
 								<input type="password" id="inputPassword6" class="form-control">
@@ -116,14 +133,14 @@ form {
 						<div class="row g-3">
 						<!-- Prenom -->
 							<div class="col-sm-6 col-lg-3">
-								<label for="prenom" class="col-form-label">Prenom</label>
+								<label for="prenom" class="col-form-label">Prenom:</label>
 							</div>
 							<div class="col-sm-6 col-lg-3" > 
 								<input type="text" id="prenom" class="form-control">
 							</div>
 						<!-- Email -->
 							<div class="col-sm-6 col-lg-3">
-								<label for="email" class="col-form-label">Email</label>
+								<label for="email" class="col-form-label">Email:</label>
 							</div>
 							<div class="col-sm-6 col-lg-3">
 								<input type="email" id="email" class="form-control">
@@ -132,7 +149,7 @@ form {
 						<div class="row g-3">
 						<!-- Telephone -->
 							<div class="col-sm-6 col-lg-3">
-								<label for="telephone" class="col-form-label">Telephone</label>
+								<label for="telephone" class="col-form-label">Telephone:</label>
 							</div>
 							<div class="col-sm-6 col-lg-3">
 								<input type="text" id="telephone" class="form-control">
@@ -148,7 +165,7 @@ form {
 						<div class="row g-3">
 						<!-- Code Postal -->
 							<div class="col-sm-6 col-lg-3">
-								<label for="codePostal" class="col-form-label">Code Postal</label>
+								<label for="codePostal" class="col-form-label">Code Postal:</label>
 							</div>
 							<div class="col-sm-6 col-lg-3">
 								<input type="text" id="codepostal" class="form-control">
@@ -156,7 +173,7 @@ form {
 							
 						<!-- Ville -->
 							<div class="col-sm-6 col-lg-3">
-								<label for="ville" class="col-form-label">Ville</label>
+								<label for="ville" class="col-form-label">Ville:</label>
 							</div>
 							<div class="col-sm-6 col-lg-3">
 								<input type="text" id="ville" class="form-control">
@@ -165,14 +182,14 @@ form {
 						<div class="row g-3">	
 						<!-- Mot de passe -->
 							<div class="col-sm-6 col-lg-3">
-								<label for="Password" class="col-form-label">Mot de Passe</label>
+								<label for="Password" class="col-form-label">Mot de Passe:</label>
 							</div>
 							<div class="col-sm-6 col-lg-3">
 								<input type="password" id="Password" class="form-control">
 							</div>
-							<!-- Pseudo -->
+						<!-- Pseudo -->
 							<div class="col-sm-6 col-lg-3">
-								<label for="inputConfirmedPassword" class="col-form-label">Confirm</label>
+								<label for="inputConfirmedPassword" class="col-form-label">Confirmation:</label>
 							</div>
 							<div class="col-sm-6 col-lg-3">
 								<input type="password" id="inputConfirmedPassword"
@@ -182,7 +199,9 @@ form {
 						
 						<div class="row">
 							<div class="col-sm-6">
-								<button type="button" class="btn btn-light btn-lg">Creer</button>
+								<a href="acceuil">
+									<button type="button" class="btn btn-light btn-lg">Creer</button>
+								</a>
 							</div>
 							<div class="col-sm-6">
 								<a href="index.html"><button type="button" class="btn btn-light btn-lg">Annuler</button></a>
