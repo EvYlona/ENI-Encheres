@@ -6,6 +6,7 @@ import java.util.List;
 public class AppliTest {
 	//Attributs
 	private List<ArticleVendu> articles;
+	private float nbrArticle;
 	
 	//Constructeur par défaut
 	public AppliTest() {
@@ -19,12 +20,24 @@ public class AppliTest {
 		 * Afficher l'état de la vente*/
 	
 	//Getter et Setter
-	public List<ArticleVendu> getArticles() {
-		return articles;
+	//Retourne l'article indexé
+	public ArticleVendu getArticleVendu(int index) {
+		return articles.get(index);
 	}
 
 	public void setArticles(List<ArticleVendu> articles) {
 		this.articles = articles;
 	}
+
+	public float getNbrArticle() {
+		return nbrArticle;
+	}
+
+	public void setNbrArticle(float nbrArticle) {
+		this.nbrArticle = nbrArticle;
+	}
+	
+	//Ajout d'un article à la liste des object vendus
+	public void addArticleVendu()
 	
 }
