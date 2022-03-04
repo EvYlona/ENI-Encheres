@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="container" >
-		<h3>Eni-Enchères</h3><br>
+		<h3 style="font-size:2rem;">Eni-Enchères</h3><br>
 		
 		<div align="justify">
 		<!-- Ligne Principale -->
