@@ -3,7 +3,7 @@ package fr.eni.javaee.ProjetEncheres.bo;
 import java.util.Date;
 import java.util.Objects;
 
-public class Categorie extends ArticleVendu {
+public class Categorie {
 		//Attributs
 		 public int noCategorie;
 		 public int libelle;
@@ -13,8 +13,7 @@ public class Categorie extends ArticleVendu {
 					String rue, String codePostal, String ville, String motDePasse, int credit, String administrateur,
 					int noArticle, String nomArticle, String description, Date dateDebutEncheres, Date dateFinEncheres,
 					int miseAPrix, int prixVente, String etatVente) {
-				super(noUtilisateur, pseudo, nom, prenom, email, telephone, rue, codePostal, ville, motDePasse, credit, administrateur,
-						noArticle, nomArticle, description, dateDebutEncheres, dateFinEncheres, miseAPrix, prixVente, etatVente);
+				super();
 			}
 		
 		//Getter/Setter

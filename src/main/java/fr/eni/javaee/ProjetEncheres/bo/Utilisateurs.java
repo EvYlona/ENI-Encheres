@@ -1,5 +1,6 @@
 package fr.eni.javaee.ProjetEncheres.bo;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Utilisateurs {
@@ -16,6 +17,7 @@ public class Utilisateurs {
 	private String motDePasse;
 	private int credit;
 	private String administrateur;
+	private ArrayList articleVendu = new ArrayList();
 	
 	/*Constructeur
 	 * Tout ce qui est en dessous des attributs et généré automatiquement
@@ -134,6 +136,14 @@ public class Utilisateurs {
 		this.administrateur = administrateur;
 	}
 	
+	public ArrayList getArticleVendu() {
+		return articleVendu;
+	}
+
+	public void setArticleVendu(ArrayList articleVendu) {
+		this.articleVendu = articleVendu;
+	}
+	
 	//ToString
 	@Override
 	public String toString() {
@@ -189,6 +199,8 @@ public class Utilisateurs {
 				&& Objects.equals(pseudo, other.pseudo) && Objects.equals(rue, other.rue)
 				&& Objects.equals(telephone, other.telephone) && Objects.equals(ville, other.ville);
 	}
+
+	
 	
 	
 	

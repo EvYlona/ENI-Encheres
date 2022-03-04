@@ -1,9 +1,11 @@
 package fr.eni.javaee.ProjetEncheres.bo;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
-public class ArticleVendu extends Utilisateurs {
+public class ArticleVendu {
 	public int  noArticle;
 	public String nomArticle;
 	public String description;
@@ -12,14 +14,15 @@ public class ArticleVendu extends Utilisateurs {
 	public int miseAPrix;
 	public int prixVente;
 	public String etatVente;
+	private Utilisateurs utilisateurs;
+	private List<String> articleVendu = new ArrayList<String>();
 	
 	//Constructeur
 	public ArticleVendu(int noUtilisateur, String pseudo, String nom, String prenom, String email, String telephone,
 			String rue, String codePostal, String ville, String motDePasse, int credit, String administrateur,
 			int noArticle, String nomArticle, String description, Date dateDebutEncheres, Date dateFinEncheres,
-			int miseAPrix, int prixVente, String etatVente) {
-		super(noUtilisateur, pseudo, nom, prenom, email, telephone, rue, codePostal, ville, motDePasse, credit,
-				administrateur);
+			int miseAPrix, int prixVente, String etatVente, List<String> articleVendu) {
+		super();
 		this.noArticle = noArticle;
 		this.nomArticle = nomArticle;
 		this.description = description;
@@ -28,7 +31,9 @@ public class ArticleVendu extends Utilisateurs {
 		this.miseAPrix = miseAPrix;
 		this.prixVente = prixVente;
 		this.etatVente = etatVente;
+		this.articleVendu = articleVendu;
 	}
+	
 	
 	//Getters/Setter
 	public String getNomArticle() {
@@ -91,6 +96,16 @@ public class ArticleVendu extends Utilisateurs {
 		return noArticle;
 	}
 	
+
+	public List<String> getArticleVendu() {
+		return articleVendu;
+	}
+
+
+	public void setArticleVendu(List<String> articleVendu) {
+		this.articleVendu = articleVendu;
+	}
+	
 	
 	//ToString
 	@Override
@@ -138,6 +153,8 @@ public class ArticleVendu extends Utilisateurs {
 				&& miseAPrix == other.miseAPrix && noArticle == other.noArticle
 				&& Objects.equals(nomArticle, other.nomArticle) && prixVente == other.prixVente;
 	}
+
+
 	
 
 	

@@ -1,15 +1,7 @@
 package fr.eni.javaee.ProjetEncheres.dal;
 
-public class ArticleVenduDaoJdbcImpl {
+public class ArticleVenduDaoJdbcImpl implements ArticleVenduDao {
+	private final String SELECT_ALL = "select no_article, nom_article, description, date_debut_encheres, date_fin_encheres,"
+			+ "prix_initial, prix_vente, no_utilisateur, no_categorie from articles_vendus";
 
-	//Déclarer les requêtes constantes
-	//Manip à faire sur SQL
-	//Connexion à la base de données
-	//Constructeur
-	//Gérer les exceptions
-	//Fermer la connexion
-	//Utilisation de try with ressource
-	//Propagation des exceptions
-	//Gestion des exceptions de la base de données
-	
 }
