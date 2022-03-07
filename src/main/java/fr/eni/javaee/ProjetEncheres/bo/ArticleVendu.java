@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class ArticleVendu {
-	public int  noArticle;
+	public int noArticle;
 	public String nomArticle;
 	public String description;
 	public Date dateDebutEncheres;
@@ -14,14 +14,16 @@ public class ArticleVendu {
 	public int miseAPrix;
 	public int prixVente;
 	public String etatVente;
+	//Association
 	private Utilisateurs utilisateurs;
-	private List<String> articleVendu = new ArrayList<String>();
+	private List<Enchere> enchere;
+	
 	
 	//Constructeur
 	public ArticleVendu(int noUtilisateur, String pseudo, String nom, String prenom, String email, String telephone,
 			String rue, String codePostal, String ville, String motDePasse, int credit, String administrateur,
 			int noArticle, String nomArticle, String description, Date dateDebutEncheres, Date dateFinEncheres,
-			int miseAPrix, int prixVente, String etatVente, List<String> articleVendu) {
+			int miseAPrix, int prixVente, String etatVente) {
 		super();
 		this.noArticle = noArticle;
 		this.nomArticle = nomArticle;
@@ -31,9 +33,8 @@ public class ArticleVendu {
 		this.miseAPrix = miseAPrix;
 		this.prixVente = prixVente;
 		this.etatVente = etatVente;
-		this.articleVendu = articleVendu;
+		enchere = new ArrayList<>();
 	}
-	
 	
 	//Getters/Setter
 	public String getNomArticle() {
@@ -96,16 +97,25 @@ public class ArticleVendu {
 		return noArticle;
 	}
 	
-
-	public List<String> getArticleVendu() {
-		return articleVendu;
+	public Utilisateurs getUtilisateurs() {
+		return utilisateurs;
 	}
 
-
-	public void setArticleVendu(List<String> articleVendu) {
-		this.articleVendu = articleVendu;
+	public void setUtilisateurs(Utilisateurs utilisateurs) {
+		this.utilisateurs = utilisateurs;
 	}
-	
+	 public int getIdUtilisateur() {
+		 return utilisateurs.getNoUtilisateur();
+	 }
+	 
+	 public List<Enchere> getEnchere() {
+			return enchere;
+		}
+
+		public void setEnchere(List<Enchere> enchere) {
+			this.enchere = enchere;
+		}
+
 	
 	//ToString
 	@Override
@@ -153,6 +163,9 @@ public class ArticleVendu {
 				&& miseAPrix == other.miseAPrix && noArticle == other.noArticle
 				&& Objects.equals(nomArticle, other.nomArticle) && prixVente == other.prixVente;
 	}
+
+	
+	
 
 
 	

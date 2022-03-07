@@ -62,18 +62,5 @@ public class Categorie {
 			Categorie other = (Categorie) obj;
 			return libelle == other.libelle && noCategorie == other.noCategorie;
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		 
-		 
-		 
-	
 
 }

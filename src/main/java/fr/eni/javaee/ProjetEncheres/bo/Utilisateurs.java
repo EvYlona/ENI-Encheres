@@ -1,11 +1,14 @@
 package fr.eni.javaee.ProjetEncheres.bo;
 
-import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Objects;
+
+
 
 public class Utilisateurs {
 	//Attributs
-	private int noUtilisateur;
+	public int noUtilisateur;
 	private String pseudo;
 	private String nom;
 	private String prenom;
@@ -17,7 +20,9 @@ public class Utilisateurs {
 	private String motDePasse;
 	private int credit;
 	private String administrateur;
-	private ArrayList articleVendu = new ArrayList();
+	//Association à la liste des encheres
+	private List<Enchere> enchere;
+	private ArticleVendu articleVendu;
 	
 	/*Constructeur
 	 * Tout ce qui est en dessous des attributs et généré automatiquement
@@ -37,8 +42,10 @@ public class Utilisateurs {
 		this.motDePasse = motDePasse;
 		this.credit = credit;
 		this.administrateur = administrateur;
+		
 	}
 	
+
 	//Getters/Setters
 	public int getNoUtilisateur() {
 		return noUtilisateur;
@@ -136,14 +143,34 @@ public class Utilisateurs {
 		this.administrateur = administrateur;
 	}
 	
-	public ArrayList getArticleVendu() {
+	public ArticleVendu getArticleVendu() {
 		return articleVendu;
 	}
 
-	public void setArticleVendu(ArrayList articleVendu) {
+	public void setArticleVendu(ArticleVendu articleVendu) {
 		this.articleVendu = articleVendu;
 	}
 	
+	//Getter pour la Liste qui retourne l'enchere
+	public List<Enchere> getEnchere() {
+		return enchere;
+	}
+	
+	//Ajout d'une enchere
+	public void addEnchere(ArticleVendu articleVendu, Date dateEnchere, Long montant_enchere, int noUtilisateur) {
+		enchere.add(new Enchere(articleVendu, dateEnchere, montant_enchere, noUtilisateur));
+	}
+	//Retourne l'enchere selectionné si pas trouvé
+	public Enchere getEnchere(int index) {
+		return Enchere.get(index);
+	}
+	//Mettre à jour la liste
+	public void updateEnchere(int index) {
+		
+	}
+
+	
+
 	//ToString
 	@Override
 	public String toString() {
@@ -200,9 +227,6 @@ public class Utilisateurs {
 				&& Objects.equals(telephone, other.telephone) && Objects.equals(ville, other.ville);
 	}
 
-	
-	
-	
 	
 	
 }
