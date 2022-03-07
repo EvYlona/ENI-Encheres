@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8"> 
-<meta content="width=device-width, initial-scale=1"
-	name="viewport" />
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -32,7 +31,7 @@ a {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 	.container-fluid {
-		width: 100vw;
+		width: 100%;
 	}
 	.header {
 		margin-top: 20px;
@@ -40,25 +39,32 @@ a {
 		margin-left: 5px;
 	}
 	.row-section {
-		margin-left: 50px; 
-	}
-	.identifiant {
-		margin-top: 10px;
-		font-size: 1.8rem;
-		text-align:center;
 		
 	}
-	.body-table {
-		height: 300px;
-		font-size: 1.3em;
+	.identifiant {
+		visibility: hidden;
+	}
+	.center {
+		margin-left: 20px;
+		width:100%;
+	}
+	.td {
+		font-size: 1.2em;
+		margin-bottom:20px;
+		
+	}
+	td {
+		padding: 0 20px;
+		height: 50px;
+		margin-top:20px;
 	}
 	.btn {
-		margin-left: 70px;
+		margin-left: 125px;
 	}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 600px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) {
 	.container-fluid {
 		width: 100vw;
 	}
@@ -75,9 +81,12 @@ a {
 		visibility: hidden;
 	}
 	.body-table {
-		font-size: 2.4rem;
-		height: 18em;
-		font-stretch:125%;
+		font-size: 2.5rem;
+	}
+	td {
+		padding: 0 30px;
+		height: 70px;
+		font-size: 2.5rem;
 	}
 	.btn {
 		margin-left: 200px;
@@ -90,15 +99,15 @@ a {
 		
 	}
 	.header {
-		margin-left: 250px;
+		margin-left: 150px;
 		margin-top: 50px;
-		font-size: 3rem;
+		font-size: 2.5rem;
 		width: 25vw;
 	}
 	.row-section {
 		font-size: 2.4rem;
 		width: 50vw;
-		margin-left: 35rem;
+		margin-left: 15rem;
 		margin-top: -40px;
 	}
 	.identifiant {
@@ -115,24 +124,27 @@ a {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+		.row-section {
+		margin-left: 25rem;
+	}
 }
 </style>
 </head>
 
 <body class="container-fluid">
-	<a href="acceuil"> <header class="header">Eni Enchères</header></a>
+	<header class="header"><a href="PageListeEncheres">Eni Enchères</a></header>
 	<br>
 	<!-- Haut de Page -->
 	<section class="row-section">
 		<div class="col-sm-12">
-			<table>
+			<table class="center">
 				<thead class="identifiant">
 					<tr>
 						<th colspan="2">Pseudo</th>
 					</tr>
 				</thead>
 				<!-- Titre du tableau -->
-				<tbody class="body-table">
+				<tbody class="td">
 					<!-- Pseudo -->
 					<tr class="pseudo">
 						<td>Pseudo:</td>
