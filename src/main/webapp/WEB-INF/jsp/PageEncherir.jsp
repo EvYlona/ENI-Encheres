@@ -24,8 +24,9 @@
 	
 </script>
 
-<title>Eni Enchères - Vendre un article</title>
+<title>Eni Enchères - Enrechir</title>
 <style>
+
 /* Mobile First */
 
 /* Small devices (tablets, 768px and up) */
@@ -230,8 +231,10 @@
 						<div class="col-sm-12">
 							<a href="PageListeEncheres">
 								<button type="button" class="btn-lg">Enregistrer</button>
-							</a> <a href="PageListeEncheres.">
+							</a> <a href="PageListeEncheres">
 								<button type="button" class="btn-lg">Annuler</button>
+							</a> <a href="PageListeEncheres">
+								<button type="button" class="btn-lg">Annuler la vente</button>
 							</a>
 						</div>
 					</div>

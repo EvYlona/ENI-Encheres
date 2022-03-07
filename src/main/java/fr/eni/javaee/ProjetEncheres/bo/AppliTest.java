@@ -38,6 +38,8 @@ public class AppliTest {
 	}
 	
 	//Ajout d'un article à la liste des object vendus
-	public void addArticleVendu()
+	public void addArticleVendu() {
+		return ;
+	}
 	
 }
