@@ -27,19 +27,23 @@
 <title>Eni Enchères -</title>
 <style>
 
-/* Mobile First */
-.header1 {
-	margin-top: 15px;
-	width: 100%;
-	margin-bottom: 30px;
-}
-
-/* Small devices (tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+/* Small devices (tablets, mobile max 768px) */
+@media only screen and (max-width: 768px) {
 	.header1 {
-		margin-top: 20px;
+		margin-top: 15px;
 		width: 100%;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
+		margin-left: 40px;
+		font-size: 1.2rem;
+	}
+	h3 {
+		font-size: 1.2rem;
+		margin-left: 30px;
+	}
+	.row_reverse {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
 	}
 }
 /* Medium devices (desktops, 992px and up) */
@@ -49,9 +53,17 @@
 		margin-top: 20px;
 		margin-left: 120px;
 	}
+	h3 {
+		text-align: center;
+	}
+	
+	.row_reverse {
+	}
 
 	/* Large devices (large desktops, 1200px and up) */
 	@media ( min-width : 1200px) {
+		
+	
 	}
 }
 </style>
@@ -63,7 +75,22 @@
 				<h2 class="header1">Eni-Encheres</h2>
 			</div>
 		</header>
-		
+	</section>
+	<section>
+		<article>
+			<div class="row">
+				<h3>Vous avez remporté l'enchère</h3>
+			</div>
+			<div class="row_reverse">
+				<div class="col-sm-12 col-lg-3">
+					<img class="img_article" src="Ressources/image/test1.jpg" />
+				</div>
+				<div class="col-sm-12 col-lg-8">PC Gamer pour travailler</div>
+
+			</div>
+
+		</article>
+
 	</section>
 </body>
 </html>
