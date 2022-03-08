@@ -179,7 +179,7 @@ form .col-form-label {
 				<!-- Nom -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="nom" class="col-form-label">Nom:</label> <input
-						type="password" id="nom" class="form-group">
+						type="texte" id="nom" class="form-group">
 				</div>
 				<!-- Prenom -->
 				<div class="col-sm-12 col-lg-6">

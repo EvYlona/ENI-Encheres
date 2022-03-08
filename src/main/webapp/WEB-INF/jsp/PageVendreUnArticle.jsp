@@ -140,7 +140,7 @@
 				<h2 class="header1">Eni-Encheres</h2>
 			</div>
 			<div class="col-sm-12 col-lg-4 offset-1">
-				<h2 class="header1">Nouvelle vente - Enrechir</h2>
+				<h2 class="header1">Nouvelle vente - Encherir</h2>
 			</div>
 		</header>
 	</section>

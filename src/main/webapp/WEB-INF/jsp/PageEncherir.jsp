@@ -209,7 +209,7 @@
 				<form>
 					<fieldset class="col-lg-5"
 						style=" margin-top: 20px; margin-bottom: 20px;">
-						<legend>Retrait</legend>
+						<legend class="w-auto">Retrait</legend>
 						<div class="col-sm-12 col-lg-11">
 							<label for="adresse" class="col-form-label">Adresse</label> <input
 								type="text" id="adresse" class="form_group">
@@ -240,7 +240,6 @@
 					</div>
 				</form>
 			</div>
-
 
 		</article>
 	</section>
