@@ -126,7 +126,7 @@ public class Utilisateurs {
 		this.motDePasse = motDePasse;
 	}
 
-	public long getCredit() {
+	public int getCredit() {
 		return credit;
 	}
 

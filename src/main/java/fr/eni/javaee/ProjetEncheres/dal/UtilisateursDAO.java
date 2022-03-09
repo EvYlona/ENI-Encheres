@@ -4,10 +4,11 @@ import fr.eni.javaee.ProjetEncheres.bo.Utilisateurs;
 
 public interface UtilisateursDAO {
 
-	public void select_by_id(Utilisateurs utilisateurs) throws DALException;
-	public void select_by_password(Utilisateurs utilisateurs) throws DALException;
-	public void insert(Utilisateurs utilisateurs) throws DALException;
-	public void update(Utilisateurs utilisateurs) throws DALException;
-	public void delete(Utilisateurs utilisateurs) throws DALException;
+	public Utilisateurs SelectById(String pseudo, String nom, String prenom, String email, String telephone, String rue, String codePostal, String ville) throws DALException;
+	public Utilisateurs SelectByPseudo (String pseudo) throws DALException;
+	public Utilisateurs SelectByMotDePasse(String motDePasse);
+	public Utilisateurs insertById (String pseudo, String nom, String prenom, String email, String telephone, String rue, String codePostal, String ville, String motDePasse) throws DALException;
+	public Utilisateurs updateById(String pseudo, String nom, String prenom, String email, String telephone, String rue, String codePostal, String ville, String motDePasse) throws DALException;
+	public Utilisateurs deleteById(Utilisateurs utilisateurs) throws DALException;
 
 }
