@@ -1,8 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import ="java.sql.*" %>
+<%@page import="fr.eni.javaee.ProjetEncheres.bo.Utilisateurs"%>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -13,7 +19,7 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
-<title>Eni Enchères - Mon profil</title>
+<title>Eni EnchÃ¨res - Mon profil</title>
 
 <style>
 a {
@@ -132,7 +138,9 @@ a {
 </head>
 
 <body class="container-fluid">
-	<header class="header"><a href="PageListeEncheres">Eni Enchères</a></header>
+
+		
+	<header class="header"><a href="<%=request.getContextPath()%>/PageListeEncheres">Eni EnchÃ¨res</a></header>
 	<br>
 	<!-- Haut de Page -->
 	<section class="row-section">
@@ -153,7 +161,7 @@ a {
 					<!-- Nom -->
 					<tr class="nom">
 						<td>Nom:</td>
-						<td>(get.Nom)</td>
+						<td>get.</td>
 					</tr>
 					<!-- Prenom -->
 					<tr class="prenom">
@@ -190,8 +198,10 @@ a {
 			<br>
 			<!-- Mon choix s'est porter sur un tableau en 2 colonne, les attributs et leurs valeurs. -->
 			<div class="row">
-				<a href="PageModifierProfil"><button type="button"
-						class="btn btn-light btn-lg">Modifier</button></a>
+			
+				<a href="<%=request.getContextPath()%>/PageModifierProfil"><input type="button"
+						value="Modifier"/></a>
+						
 			</div>
 			<!-- 2nde Ligne Bootstrap ayant le bouton modifier qui va rediriger l'utilisateur vers la page modifier -->
 		</div>
@@ -199,5 +209,5 @@ a {
 	<!-- Section qui comporte les information profil Utilisateur: 1ere ligne bootstrap-->
 
 </body>
-<!-- Container-fluid me permettant d'étandre au maximum l'espacement de la page -->
+<!-- Container-fluid me permettant d'Ã©tandre au maximum l'espacement de la page -->
 </html>

@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<%@page import="fr.eni.javaee.ProjetEncheres.bo.Utilisateurs"%>
+
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -160,7 +162,6 @@ form .col-form-label {
 </style>
 </head>
 <body class="container-fluid">
-	<section>
 		<header class="row">
 			<div class="col-sm-12 col-lg-12">
 				<h2 class="header1">Eni-Encheres</h2>
@@ -170,66 +171,76 @@ form .col-form-label {
 			<div class="row">
 				<p class="titre" align="center">Creer un compte</p>
 			</div>
-			<form class="row">
+			<form class="row" action="<%=request.getContextPath()%>/pageCreerCompte" method="post">
 				<!-- Pseudo -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="pseudo" class="col-form-label">Pseudo:</label> <input
-						type="text" id="pseudo" class="form-group">
+						type="text" id="pseudo" name="pseudo" class="form-group" 
+						value="<%=request.getParameter("pseudo")%>">
 				</div>
 				<!-- Nom -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="nom" class="col-form-label">Nom:</label> <input
-						type="texte" id="nom" class="form-group">
+						type="text" id="nom" name="lastname" class="form-group"
+						value="<%=request.getParameter("lastname")%>">
 				</div>
 				<!-- Prenom -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="prenom" class="col-form-label">Prenom:</label> <input
-						type="text" id="prenom" class="form-group">
+						type="text" id="prenom" name="firstname" class="form-group"
+						value="<%=request.getParameter("firstname")%>">
 				</div>
 				<!-- Email -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="email" class="col-form-label">Email:</label> <input
-						type="email" id="email" class="form-group">
+						type="email" id="email" name="email" class="form-group"
+						value="<%=request.getParameter("email")%>">
 				</div>
 				<!-- Telephone -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="telephone" class="col-form-label">Telephone:</label> <input
-						type="text" id="telephone" class="form-group">
+						type="text" id="telephone" name="phone" class="form-group"
+						value="<%=request.getParameter("phone")%>">
 				</div>
 				<!-- Rue -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="rue" class="col-form-label">Rue</label> <input
-						type="text" id="rue" class="form-group">
+						type="text" id="rue" name="street" class="form-group"
+						value="<%=request.getParameter("street")%>">
 				</div>
 				<!-- Code Postal -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="codePostal" class="col-form-label">Code Postal:</label>
-					<input type="text" id="codepostal" class="form-group">
+					<input type="text" id="codepostal" name="zip" class="form-group"
+					value="<%=request.getParameter("zip")%>">
 				</div>
 
 				<!-- Ville -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="ville" class="col-form-label">Ville:</label> <input
-						type="text" id="ville" class="form-group">
+						type="text" id="ville" name="city" class="form-group"
+						value="<%=request.getParameter("city")%>">
 				</div>
 
 				<!-- Mot de passe -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="Password" class="col-form-label">Mot de Passe:</label>
-					<input type="password" id="Password" class="form-group">
+					<input type="password" id="Password" name="password" class="form-group"
+					value="<%=request.getParameter("password")%>">
 				</div>
 
 				<!-- Pseudo -->
 				<div class="col-sm-12 col-lg-6">
-					<label for="inputConfirmedPassword" class="col-form-label">Confirmation:</label>
-					<input type="password" id="ConfirmedPassword" class="form-group">
+					<label for="Password" class="col-form-label">Confirmation:</label>
+					<input type="password" id="ConfirmedPassword" name="password" class="form-group"
+					value="<%=request.getParameter("password")%>">
 				</div>
 			</form>
 			<!-- Bouton -->
 			<div class="row bouton">
 				<div class="col-sm-12">
-					<a href="PageListeEncheres"><button type="button" class="btn-lg">Creer</button></a>
-					<a href="index.html"><button type="button" class="btn-lg">Annuler</button></a>
+					<a href="<%=request.getContextPath()%>/pageListeEncheres"><button type="button" class="btn-lg">Creer</button></a>
+					<a href="/index.jsp"><button type="button" class="btn-lg">Annuler</button></a>
 				</div>
 			</div>
 		</article>

@@ -31,7 +31,6 @@
 </style>
 </head>
 <body class="container-fluid">
-	<section>
 		<header class="col-xs-12">
 			<div class="row">
 				<div class="col-sm-12 col-lg-6">
@@ -74,7 +73,7 @@
 								</div>
 							</div>
 							<div class="row" align="justify">
-								<a href="index.html">Mot de passe oublié</a>
+								<a href="/index.jsp">Mot de passe oublié</a>
 							</div>
 						</div>
 						<div class="row">
