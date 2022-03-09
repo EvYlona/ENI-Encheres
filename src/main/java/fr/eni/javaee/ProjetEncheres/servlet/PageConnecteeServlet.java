@@ -12,13 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class PageListeEncheresServlet
  */
-@WebServlet("/PageListeEncheres")
-public class PageListeEncheresServlet extends HttpServlet {
+@WebServlet("/PageConnectee")
+public class PageConnecteeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/PageListeEncheres.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/PageConnectee.jsp");
 		rd.forward(request, response);
 	}
 	

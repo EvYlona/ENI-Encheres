@@ -202,8 +202,9 @@ h6 .title {
 			</div>
 
 			<div class="row">
-				<div class="col-lg-12 d-none d-md-block">
+				<div class="col-lg-6 d-none d-md-block">
 					<h3 class="header3">Liste des enchères</h3>
+					<h3 class="col-lg-6 offset-3" style="float:right;">est connecté</h3>
 				</div>
 			</div>
 		</header>

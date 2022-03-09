@@ -2,6 +2,7 @@ package fr.eni.javaee.ProjetEncheres.dal;
 
 import java.util.List;
 import fr.eni.javaee.ProjetEncheres.bo.Enchere;
+import fr.eni.javaee.ProjetEncheres.bo.Utilisateurs;
 
 public interface EnchereDAO {
 	
@@ -16,5 +17,5 @@ public interface EnchereDAO {
 	public void delete(Integer idEnchere) throws DALException;
 	
 	//Insert utilisateur, delete, update
-	public void insert(Utilisateur)
+	public void insert(Utilisateurs utilisateur);
 }

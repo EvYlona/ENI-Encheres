@@ -181,14 +181,14 @@ form .col-form-label {
 				<!-- Nom -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="nom" class="col-form-label">Nom:</label> <input
-						type="text" id="nom" name="lastname" class="form-group"
-						value="<%=request.getParameter("lastname")%>">
+						type="text" id="nom" name="nom" class="form-group"
+						value="<%=request.getParameter("nom")%>">
 				</div>
 				<!-- Prenom -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="prenom" class="col-form-label">Prenom:</label> <input
-						type="text" id="prenom" name="firstname" class="form-group"
-						value="<%=request.getParameter("firstname")%>">
+						type="text" id="prenom" name="prenom" class="form-group"
+						value="<%=request.getParameter("prenom")%>">
 				</div>
 				<!-- Email -->
 				<div class="col-sm-12 col-lg-6">
@@ -199,27 +199,27 @@ form .col-form-label {
 				<!-- Telephone -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="telephone" class="col-form-label">Telephone:</label> <input
-						type="text" id="telephone" name="phone" class="form-group"
-						value="<%=request.getParameter("phone")%>">
+						type="text" id="telephone" name="telephone" class="form-group"
+						value="<%=request.getParameter("telephone")%>">
 				</div>
 				<!-- Rue -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="rue" class="col-form-label">Rue</label> <input
-						type="text" id="rue" name="street" class="form-group"
-						value="<%=request.getParameter("street")%>">
+						type="text" id="rue" name="rue" class="form-group"
+						value="<%=request.getParameter("rue")%>">
 				</div>
 				<!-- Code Postal -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="codePostal" class="col-form-label">Code Postal:</label>
-					<input type="text" id="codepostal" name="zip" class="form-group"
-					value="<%=request.getParameter("zip")%>">
+					<input type="text" id="codepostal" name="codepostal" class="form-group"
+					value="<%=request.getParameter("codepostal")%>">
 				</div>
 
 				<!-- Ville -->
 				<div class="col-sm-12 col-lg-6">
 					<label for="ville" class="col-form-label">Ville:</label> <input
-						type="text" id="ville" name="city" class="form-group"
-						value="<%=request.getParameter("city")%>">
+						type="text" id="ville" name="ville" class="form-group"
+						value="<%=request.getParameter("ville")%>">
 				</div>
 
 				<!-- Mot de passe -->
@@ -239,7 +239,7 @@ form .col-form-label {
 			<!-- Bouton -->
 			<div class="row bouton">
 				<div class="col-sm-12">
-					<a href="<%=request.getContextPath()%>/pageListeEncheres"><button type="button" class="btn-lg">Creer</button></a>
+					<a href="<%=request.getContextPath()%>/PageConnectee"><button type="button" class="btn-lg">Creer</button></a>
 					<a href="/index.jsp"><button type="button" class="btn-lg">Annuler</button></a>
 				</div>
 			</div>

@@ -4,10 +4,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-
-
 public class Utilisateurs {
-	//Attributs
+
+	// Attributs
 	public int noUtilisateur;
 	private String pseudo;
 	private String nom;
@@ -20,16 +19,21 @@ public class Utilisateurs {
 	private String motDePasse;
 	private int credit;
 	private String administrateur;
-	//Association à la liste des encheres
+	// Association à la liste des encheres
 	private List<Enchere> enchere;
-	
-	/*Constructeur
-	 * Tout ce qui est en dessous des attributs et généré automatiquement
+
+	/*
+	 * Constructeur Tout ce qui est en dessous des attributs et généré
+	 * automatiquement
 	 */
-	public Utilisateurs(int noUtilisateur, String pseudo, String nom, String prenom, String email, String telephone,
-			String rue, String codePostal, String ville, String motDePasse, int credit, String administrateur) {
-		super();
-		this.noUtilisateur = noUtilisateur;
+	public Utilisateurs() {
+	}
+
+	
+	
+	
+	public Utilisateurs(String pseudo, String nom, String prenom, String email, String telephone, String rue,
+			String codePostal, String ville, String motDePasse) {
 		this.pseudo = pseudo;
 		this.nom = nom;
 		this.prenom = prenom;
@@ -39,13 +43,20 @@ public class Utilisateurs {
 		this.codePostal = codePostal;
 		this.ville = ville;
 		this.motDePasse = motDePasse;
+
+	}
+
+	public Utilisateurs(int noUtilisateur, String pseudo, String nom, String prenom, String email, String telephone,
+			String rue, String codePostal, String ville, String motDePasse, int credit, String administrateur) {
+		super();
+		this.noUtilisateur = noUtilisateur;
+
 		this.credit = credit;
 		this.administrateur = administrateur;
-		
-	}
-	
 
-	//Getters/Setters
+	}
+
+	// Getters/Setters
 	public int getNoUtilisateur() {
 		return noUtilisateur;
 	}
@@ -141,29 +152,28 @@ public class Utilisateurs {
 	public void setAdministrateur(String administrateur) {
 		this.administrateur = administrateur;
 	}
-	
-	
-	//Getter pour la Liste qui retourne l'enchere
+
+	// Getter pour la Liste qui retourne l'enchere
 	public List<Enchere> getEnchere() {
 		return enchere;
 	}
-	
-	//Ajout d'une enchere
+
+	// Ajout d'une enchere
 	public void addEnchere(ArticleVendu articleVendu, Date dateEnchere, Long montant_enchere, int noUtilisateur) {
 		enchere.add(new Enchere(articleVendu, dateEnchere, montant_enchere, noUtilisateur));
 	}
-	//Retourne l'enchere selectionné si pas trouvé
+
+	// Retourne l'enchere selectionné si pas trouvé
 	public Enchere getEnchere(int index) {
 		return Enchere.get(index);
 	}
-	//Mettre à jour la liste
+
+	// Mettre à jour la liste
 	public void updateEnchere(int index) {
-		
+
 	}
 
-	
-
-	//ToString
+	// ToString
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -195,7 +205,7 @@ public class Utilisateurs {
 		return builder.toString();
 	}
 
-	//Equals et HashCode
+	// Equals et HashCode
 	@Override
 	public int hashCode() {
 		return Objects.hash(administrateur, codePostal, credit, email, motDePasse, noUtilisateur, nom, prenom, pseudo,
@@ -219,6 +229,4 @@ public class Utilisateurs {
 				&& Objects.equals(telephone, other.telephone) && Objects.equals(ville, other.ville);
 	}
 
-	
-	
 }

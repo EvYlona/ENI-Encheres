@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.jasper.tagplugins.jstl.core.Out;
 
 import fr.eni.javaee.ProjetEncheres.bll.EnchereManager;
+import fr.eni.javaee.ProjetEncheres.bll.UtilisateurManager;
 import fr.eni.javaee.ProjetEncheres.bo.Utilisateurs;
 import fr.eni.javaee.ProjetEncheres.dal.DALException;
 import fr.eni.javaee.ProjetEncheres.dal.UtilisateursDAO;
@@ -38,44 +39,25 @@ public class PageCreerCompteServlet extends HttpServlet {
 		// étape 2 recup saisies utilisateur
 		
 		String pseudo = request.getParameter("pseudo");
-		String nom = request.getParameter("lastname");
-		String prenom = request.getParameter("firstname");
+		String nom = request.getParameter("nom");
+		String prenom = request.getParameter("prenom");
 		String email = request.getParameter("email");
-		String telephone = request.getParameter("phone");
-		String rue = request.getParameter("street");
-		String codePostal = request.getParameter("zip");
-		String ville = request.getParameter("street");
+		String telephone = request.getParameter("telephone");
+		String rue = request.getParameter("rue");
+		String codePostal = request.getParameter("codepostal");
+		String ville = request.getParameter("ville");
 		String motDePasse = request.getParameter("password");
-		String confmdp = request.getParameter("password");
 		
-		try {
-			motDePasse = confmdp;
 			
-		}catch (Exception e)
-		{
-			System.out.println("mot de passe pas pareil");
-		}
-		
-		Utilisateurs utilisateur = new Utilisateurs(pseudo, nom, prenom, email,
-				telephone, rue, codePostal, ville, motDePasse);
+		Utilisateurs utilisateur = new Utilisateurs(pseudo, nom, prenom, email, telephone, rue, codePostal, ville, motDePasse);
 		
 		// étape 4 verser les donner à la couche métier
 		
-		
-		utilisateur.setPseudo(pseudo);
-		utilisateur.setNom(nom);
-		utilisateur.setPrenom(prenom);
-		utilisateur.setEmail(email);
-		utilisateur.setTelephone(telephone);
-		utilisateur.setRue(rue);
-		utilisateur.setCodePostal(codePostal);
-		utilisateur.setVille(ville);
-		utilisateur.setMotDePasse(motDePasse);
 
-		EnchereManager.insert(utilisateur);
 		
-		
-		request.getRequestDispatcher("/WEB-INF/jsp/PageListeEncheres.jsp").forward(request, response);
+		UtilisateurManager.insertById(utilisateur);
+
+		response.sendRedirect("/PageListeEncheres");
 	}
 
 }
