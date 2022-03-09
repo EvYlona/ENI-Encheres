@@ -15,4 +15,6 @@ public interface EnchereDAO {
 	
 	public void delete(Integer idEnchere) throws DALException;
 	
+	//Insert utilisateur, delete, update
+	public void insert(Utilisateur)
 }

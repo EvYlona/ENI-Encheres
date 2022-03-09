@@ -7,9 +7,6 @@ public class Enchere {
 		//Attributs
 		public Date dateEnchere;
 		public Long montant_enchere;
-		//Informations à afficher d'autres classes
-				public int noUtilisateur;
-				public int  noArticle;
 		//Associations
 		private ArticleVendu articleVendu;
 		private Utilisateurs utilisateurs;
@@ -21,8 +18,6 @@ public class Enchere {
 			super();
 			this.dateEnchere = dateEnchere;
 			this.montant_enchere = montant_enchere;
-			this.noUtilisateur = noUtilisateur;
-			this.noArticle = noArticle;
 			this.articleVendu = articleVendu;
 			this.utilisateurs = utilisateurs;
 		}
@@ -47,21 +42,7 @@ public class Enchere {
 		public void setMontant_enchere(Long montant_enchere) {
 			this.montant_enchere = montant_enchere;
 		}
-		public int getNoUtilisateur() {
-			return noUtilisateur;
-		}
-
-		public void setNoUtilisateur(int noUtilisateur) {
-			this.noUtilisateur = noUtilisateur;
-		}
-
-		public int getNoArticle() {
-			return noArticle;
-		}
-
-		public void setNoArticle(int noArticle) {
-			this.noArticle = noArticle;
-		}
+	
 		public ArticleVendu getArticleVendu() {
 			return articleVendu;
 		}

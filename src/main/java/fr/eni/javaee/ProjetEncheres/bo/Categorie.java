@@ -1,21 +1,21 @@
 package fr.eni.javaee.ProjetEncheres.bo;
 
-import java.util.Date;
 import java.util.Objects;
 
 public class Categorie {
 		//Attributs
 		 public int noCategorie;
 		 public int libelle;
+		 //Association
+		 private ArticleVendu articleVendu;
 		 
-		 //Constructeur avec superclass
-		 public Categorie(int noUtilisateur, String pseudo, String nom, String prenom, String email, String telephone,
-					String rue, String codePostal, String ville, String motDePasse, int credit, String administrateur,
-					int noArticle, String nomArticle, String description, Date dateDebutEncheres, Date dateFinEncheres,
-					int miseAPrix, int prixVente, String etatVente) {
+		 //Constructeur 
+		 public Categorie(int noCategorie, int libelle) {
 				super();
+				this.noCategorie = noCategorie;
+				this.libelle = libelle;
 			}
-		
+		 
 		//Getter/Setter
 		public int getNoCategorie() {
 			return noCategorie;
@@ -31,6 +31,13 @@ public class Categorie {
 
 		public void setLibelle(int libelle) {
 			this.libelle = libelle;
+		}
+		public ArticleVendu getArticleVendu() {
+			return articleVendu;
+		}
+
+		public void setArticleVendu(ArticleVendu articleVendu) {
+			this.articleVendu = articleVendu;
 		}
 		
 		//ToString
@@ -62,5 +69,7 @@ public class Categorie {
 			Categorie other = (Categorie) obj;
 			return libelle == other.libelle && noCategorie == other.noCategorie;
 		}
+
+		
 
 }

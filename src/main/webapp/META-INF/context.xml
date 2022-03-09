@@ -18,7 +18,7 @@
 		type="javax.sql.DataSource"
 		url="jdbc:sqlserver://localhost;databasename=ENCHERES_DB"
 		username="sa"
-		password="Pa$$w0rd"
+		password="m3107e"
 		maxTotal="100"
 		maxIdle="30"
 		maxWaitMillis="10000"

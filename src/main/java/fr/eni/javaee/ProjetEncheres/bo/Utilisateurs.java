@@ -22,7 +22,6 @@ public class Utilisateurs {
 	private String administrateur;
 	//Association à la liste des encheres
 	private List<Enchere> enchere;
-	private ArticleVendu articleVendu;
 	
 	/*Constructeur
 	 * Tout ce qui est en dessous des attributs et généré automatiquement
@@ -143,13 +142,6 @@ public class Utilisateurs {
 		this.administrateur = administrateur;
 	}
 	
-	public ArticleVendu getArticleVendu() {
-		return articleVendu;
-	}
-
-	public void setArticleVendu(ArticleVendu articleVendu) {
-		this.articleVendu = articleVendu;
-	}
 	
 	//Getter pour la Liste qui retourne l'enchere
 	public List<Enchere> getEnchere() {

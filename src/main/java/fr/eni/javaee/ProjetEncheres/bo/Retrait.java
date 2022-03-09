@@ -6,6 +6,8 @@ public class Retrait {
 		private String rue;
 		private int code_postal;
 		private String ville;
+		//Association
+		private ArticleVendu articleVendu;
 		
 		//Constructeur généré aussi automatiquement, comme tout ce qui suit
 		public Retrait(String rue, int code_postal, String ville) {
@@ -39,6 +41,14 @@ public class Retrait {
 		public void setVille(String ville) {
 			this.ville = ville;
 		}
+		public ArticleVendu getArticleVendu() {
+			return articleVendu;
+		}
+
+		public void setArticleVendu(ArticleVendu articleVendu) {
+			this.articleVendu = articleVendu;
+		}
+		
 
 		//ToString
 		@Override
@@ -72,6 +82,7 @@ public class Retrait {
 			return code_postal == other.code_postal && Objects.equals(rue, other.rue)
 					&& Objects.equals(ville, other.ville);
 		}
+
 		
 		
 		

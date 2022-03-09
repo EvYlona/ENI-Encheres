@@ -14,9 +14,11 @@ public class ArticleVendu {
 	public int miseAPrix;
 	public int prixVente;
 	public String etatVente;
-	//Association
+	//Associations
 	private Utilisateurs utilisateurs;
 	private List<Enchere> enchere;
+	private Categorie categorie;
+	private Retrait retrait;
 	
 	
 	//Constructeur
@@ -110,11 +112,28 @@ public class ArticleVendu {
 	 
 	 public List<Enchere> getEnchere() {
 			return enchere;
-		}
+	}
 
-		public void setEnchere(List<Enchere> enchere) {
+	public void setEnchere(List<Enchere> enchere) {
 			this.enchere = enchere;
-		}
+	}
+	public Categorie getCategorie() {
+		return categorie;
+	}
+
+	public void setCategorie(Categorie categorie) {
+		this.categorie = categorie;
+	}
+
+	public Retrait getRetrait() {
+		return retrait;
+	}
+
+	public void setRetrait(Retrait retrait) {
+		this.retrait = retrait;
+	}
+
+		
 
 	
 	//ToString
@@ -164,6 +183,7 @@ public class ArticleVendu {
 				&& Objects.equals(nomArticle, other.nomArticle) && prixVente == other.prixVente;
 	}
 
+	
 	
 	
 
