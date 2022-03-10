@@ -23,7 +23,7 @@ import fr.eni.javaee.ProjetEncheres.dal.UtilisateursDAOJdbcImpl;
  */
 
 
-@WebServlet("/pageCreerCompte")
+@WebServlet("/pageCreationCompte")
 public class PageCreerCompteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -48,16 +48,26 @@ public class PageCreerCompteServlet extends HttpServlet {
 		String ville = request.getParameter("ville");
 		String motDePasse = request.getParameter("password");
 		
-			
-		Utilisateurs utilisateur = new Utilisateurs(pseudo, nom, prenom, email, telephone, rue, codePostal, ville, motDePasse);
+		pseudo = request.getParameter("pseudo");
+		nom = request.getParameter("nom");
+		prenom = request.getParameter("prenom");
+		email = request.getParameter("email");
+		telephone = request.getParameter("telephone");
+		rue = request.getParameter("rue");
+		codePostal = request.getParameter("codepostal");
+		ville = request.getParameter("ville");
+		motDePasse = request.getParameter("password");
 		
 		// étape 4 verser les donner à la couche métier
 		
 
 		
-		UtilisateurManager.insertById(utilisateur);
+		UtilisateurManager utilisateurManager = new UtilisateurManager();
+		
+		utilisateurManager.ajouterUtilisateur(pseudo, nom, prenom, email, telephone, rue, codePostal, ville, motDePasse);
 
-		response.sendRedirect("/PageListeEncheres");
+		RequestDispatcher rd = request.getRequestDispatcher("/pageConnectee");
+		rd.forward(request, response);
 	}
 
 }

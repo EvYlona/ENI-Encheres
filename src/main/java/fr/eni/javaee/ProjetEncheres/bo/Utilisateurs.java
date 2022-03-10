@@ -18,7 +18,7 @@ public class Utilisateurs {
 	private String ville;
 	private String motDePasse;
 	private int credit;
-	private String administrateur;
+	private byte administrateur;
 	// Association à la liste des encheres
 	private List<Enchere> enchere;
 
@@ -47,7 +47,7 @@ public class Utilisateurs {
 	}
 
 	public Utilisateurs(int noUtilisateur, String pseudo, String nom, String prenom, String email, String telephone,
-			String rue, String codePostal, String ville, String motDePasse, int credit, String administrateur) {
+			String rue, String codePostal, String ville, String motDePasse, int credit, byte administrateur) {
 		super();
 		this.noUtilisateur = noUtilisateur;
 
@@ -145,11 +145,11 @@ public class Utilisateurs {
 		this.credit = credit;
 	}
 
-	public String getAdministrateur() {
+	public byte getAdministrateur() {
 		return administrateur;
 	}
 
-	public void setAdministrateur(String administrateur) {
+	public void setAdministrateur(byte administrateur) {
 		this.administrateur = administrateur;
 	}
 

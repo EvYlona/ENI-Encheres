@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <%@page import="fr.eni.javaee.ProjetEncheres.bo.Utilisateurs"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <html lang="fr">
 <head>
@@ -26,7 +28,7 @@
 	
 </script>
 
-<title>Eni Enchères - Creer son compte</title>
+<title>Eni EnchÃ¨res - Creer son compte</title>
 <style>
 
 /* Mobile First */
@@ -162,87 +164,90 @@ form .col-form-label {
 </style>
 </head>
 <body class="container-fluid">
-		<header class="row">
-			<div class="col-sm-12 col-lg-12">
-				<h2 class="header1">Eni-Encheres</h2>
+	<header class="row">
+		<div class="col-sm-12 col-lg-12">
+			<h2 class="header1">Eni-Encheres</h2>
+		</div>
+	</header>
+	<article class="col-xs-12">
+		<div class="row">
+			<p class="titre" align="center">Creer un compte</p>
+		</div>
+		<form action="<%=request.getContextPath()%>/pageCreationCompte"
+			method="post">
+			<!-- Pseudo -->
+			<div class="col-sm-12 col-lg-6">
+				<label for="pseudo" class="col-form-label">Pseudo:</label> <input
+					type="text" name="pseudo" class="form-group"
+					value="<%=request.getParameter("pseudo")%>">
 			</div>
-		</header>
-		<article class="col-xs-12">
-			<div class="row">
-				<p class="titre" align="center">Creer un compte</p>
+			<!-- Nom -->
+			<div class="col-sm-12 col-lg-6">
+				<label for="nom" class="col-form-label">Nom:</label> <input
+					type="text" name="nom" class="form-group"
+					value="<%=request.getParameter("nom")%>">
 			</div>
-			<form class="row" action="<%=request.getContextPath()%>/pageCreerCompte" method="post">
-				<!-- Pseudo -->
-				<div class="col-sm-12 col-lg-6">
-					<label for="pseudo" class="col-form-label">Pseudo:</label> <input
-						type="text" id="pseudo" name="pseudo" class="form-group" 
-						value="<%=request.getParameter("pseudo")%>">
-				</div>
-				<!-- Nom -->
-				<div class="col-sm-12 col-lg-6">
-					<label for="nom" class="col-form-label">Nom:</label> <input
-						type="text" id="nom" name="nom" class="form-group"
-						value="<%=request.getParameter("nom")%>">
-				</div>
-				<!-- Prenom -->
-				<div class="col-sm-12 col-lg-6">
-					<label for="prenom" class="col-form-label">Prenom:</label> <input
-						type="text" id="prenom" name="prenom" class="form-group"
-						value="<%=request.getParameter("prenom")%>">
-				</div>
-				<!-- Email -->
-				<div class="col-sm-12 col-lg-6">
-					<label for="email" class="col-form-label">Email:</label> <input
-						type="email" id="email" name="email" class="form-group"
-						value="<%=request.getParameter("email")%>">
-				</div>
-				<!-- Telephone -->
-				<div class="col-sm-12 col-lg-6">
-					<label for="telephone" class="col-form-label">Telephone:</label> <input
-						type="text" id="telephone" name="telephone" class="form-group"
-						value="<%=request.getParameter("telephone")%>">
-				</div>
-				<!-- Rue -->
-				<div class="col-sm-12 col-lg-6">
-					<label for="rue" class="col-form-label">Rue</label> <input
-						type="text" id="rue" name="rue" class="form-group"
-						value="<%=request.getParameter("rue")%>">
-				</div>
-				<!-- Code Postal -->
-				<div class="col-sm-12 col-lg-6">
-					<label for="codePostal" class="col-form-label">Code Postal:</label>
-					<input type="text" id="codepostal" name="codepostal" class="form-group"
+			<!-- Prenom -->
+			<div class="col-sm-12 col-lg-6">
+				<label for="prenom" class="col-form-label">Prenom:</label> <input
+					type="text" name="prenom" class="form-group"
+					value="<%=request.getParameter("prenom")%>">
+			</div>
+			<!-- Email -->
+			<div class="col-sm-12 col-lg-6">
+				<label for="email" class="col-form-label">Email:</label> <input
+					type="email" name="email" class="form-group"
+					value="<%=request.getParameter("email")%>">
+			</div>
+			<!-- Telephone -->
+			<div class="col-sm-12 col-lg-6">
+				<label for="telephone" class="col-form-label">Telephone:</label> <input
+					type="text" name="telephone" class="form-group"
+					value="<%=request.getParameter("telephone")%>">
+			</div>
+			<!-- Rue -->
+			<div class="col-sm-12 col-lg-6">
+				<label for="rue" class="col-form-label">Rue</label> <input
+					type="text" name="rue" class="form-group"
+					value="<%=request.getParameter("rue")%>">
+			</div>
+			<!-- Code Postal -->
+			<div class="col-sm-12 col-lg-6">
+				<label for="codePostal" class="col-form-label">Code Postal:</label>
+				<input type="text" name="codepostal" class="form-group"
 					value="<%=request.getParameter("codepostal")%>">
-				</div>
+			</div>
 
-				<!-- Ville -->
-				<div class="col-sm-12 col-lg-6">
-					<label for="ville" class="col-form-label">Ville:</label> <input
-						type="text" id="ville" name="ville" class="form-group"
-						value="<%=request.getParameter("ville")%>">
-				</div>
+			<!-- Ville -->
+			<div class="col-sm-12 col-lg-6">
+				<label for="ville" class="col-form-label">Ville:</label> <input
+					type="text" name="ville" class="form-group"
+					value="<%=request.getParameter("ville")%>">
+			</div>
 
-				<!-- Mot de passe -->
-				<div class="col-sm-12 col-lg-6">
-					<label for="Password" class="col-form-label">Mot de Passe:</label>
-					<input type="password" id="Password" name="password" class="form-group"
+			<!-- Mot de passe -->
+			<div class="col-sm-12 col-lg-6">
+				<label for="Password" class="col-form-label">Mot de Passe:</label> <input
+					type="password" name="password" class="form-group"
 					value="<%=request.getParameter("password")%>">
-				</div>
+			</div>
 
-				<!-- Pseudo -->
-				<div class="col-sm-12 col-lg-6">
-					<label for="Password" class="col-form-label">Confirmation:</label>
-					<input type="password" id="ConfirmedPassword" name="password" class="form-group"
+			<!-- Pseudo -->
+			<div class="col-sm-12 col-lg-6">
+				<label for="Password" class="col-form-label">Confirmation:</label> <input
+					type="password" name="password" class="form-group"
 					value="<%=request.getParameter("password")%>">
-				</div>
-			</form>
+			</div>
+
 			<!-- Bouton -->
 			<div class="row bouton">
 				<div class="col-sm-12">
-					<a href="<%=request.getContextPath()%>/PageConnectee"><button type="button" class="btn-lg">Creer</button></a>
-					<a href="/index.jsp"><button type="button" class="btn-lg">Annuler</button></a>
+					<a href="<%=request.getContextPath()%>/pageConnectee"><input type="submit"
+							></button></a> <a href="/index.jsp"><button
+							type="button" class="btn-lg">Annuler</button></a>
 				</div>
 			</div>
-		</article>
+		</form>
+	</article>
 </body>
 </html>
