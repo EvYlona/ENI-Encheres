@@ -14,7 +14,7 @@ public class UtilisateurManager {
 
 
 	public Utilisateurs ajouterUtilisateur (String pseudo, String nom, String prenom, String email, String telephone, String rue,
-			String codePostal, String ville, String motDePasse) {
+			String codePostal, String ville, String motDePasse, int credit, byte adminsttrateur) {
 			
 		Utilisateurs utilisateur = null;
 		utilisateur = new Utilisateurs();
@@ -27,6 +27,8 @@ public class UtilisateurManager {
 		utilisateur.setCodePostal(codePostal);
 		utilisateur.setVille(ville);
 		utilisateur.setMotDePasse(motDePasse);
+		utilisateur.setCredit(credit);
+		utilisateur.setAdministrateur(adminsttrateur);
 		
 		this.utilisateurDao.insertById(utilisateur);
 		

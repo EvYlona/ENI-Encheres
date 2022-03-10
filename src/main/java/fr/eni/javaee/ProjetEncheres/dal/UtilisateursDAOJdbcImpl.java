@@ -11,10 +11,11 @@ public class UtilisateursDAOJdbcImpl implements UtilisateursDAO {
 	private static final String SELECT_BY_ID = "SELECT INTO UTILISATEURS(pseudo, nom, prenom, email, telephone, rue, code_postal, ville) VALUES(?,?,?,?,?,?,?,?);";
 	private static final String SELECT_BY_PSEUDO = "SELECT INTO UTILISATEURS(pseudo) VALUE(?);";
 	private static final String SELECT_BY_MOT_DE_PASSE = "SELECT INTO UTILISATEURS(mot_de_passe) VALUE(?);";
-	private static final String INSERT_BY_ID = "INSERT INTO UTILISATEURS(pseudo, nom, prenom, email, telephone, rue, code_postal, ville, mot_de_passe) VALUES(?,?,?,?,?,?,?,?,?);";
+	private static final String INSERT_BY_ID = "INSERT INTO UTILISATEURS(pseudo, nom, prenom, email, telephone, rue, code_postal, ville, mot_de_passe, credit, administrateur) VALUES(?,?,?,?,?,?,?,?,?,?,?);";
 	private static final String UPDATE_BY_ID = "UPDATE INTO UTILISATEURS(pseudo, nom, prenom, email, telephone, rue, code_postal, ville, mot_de_passe) VALUES(?,?,?,?,?,?,?,?,?);";
 	private static final String DELETE_BY_ID = "DELETE INTO UTILISATEURS(pseudo, nom, prenom, email, telephone, rue, code_postal, ville, mot_de_passe, credit, administrateur) VALUES(?,?,?,?,?,?,?,?,?,?,?,?);";
-
+	
+	
 	// Méthode SelectById
 	@Override
 	public void SelectById(Utilisateurs utilisateurs) throws DALException {
@@ -96,12 +97,14 @@ public class UtilisateursDAOJdbcImpl implements UtilisateursDAO {
 			pstmt.setString(7, utilisateurs.getCodePostal());
 			pstmt.setString(8, utilisateurs.getVille());
 			pstmt.setString(9, utilisateurs.getMotDePasse());
+			pstmt.setInt(10, utilisateurs.getCredit());
+			pstmt.setByte(11, utilisateurs.getAdministrateur());
 			pstmt.executeUpdate();
 			ResultSet rs = pstmt.getGeneratedKeys();
 			if(rs.next())
 			{
 				utilisateurs.setNoUtilisateur(rs.getInt(1));
-				utilisateurs.setCredit(0);
+
 			}
 			rs.close();
 			pstmt.close();
@@ -113,7 +116,8 @@ public class UtilisateursDAOJdbcImpl implements UtilisateursDAO {
 	// Méthode UpdateById
 	@Override
 	public void updateById(Utilisateurs utilisateurs) throws DALException {
-
+		
+		
 		try (Connection cnx = ConnectionProvider.getConnection()) {
 			// Getters et Setter pour modifier l'utilisateur
 			PreparedStatement pstmt = cnx.prepareStatement(UPDATE_BY_ID, PreparedStatement.RETURN_GENERATED_KEYS);
