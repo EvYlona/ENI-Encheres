@@ -156,42 +156,42 @@ a {
 					<!-- Pseudo -->
 					<tr class="pseudo">
 						<td>Pseudo:</td>
-						<td>(get.Pseudo)</td>
+						<td><%=request.getParameter("pseudo")%></td>
 					</tr>
 					<!-- Nom -->
 					<tr class="nom">
 						<td>Nom:</td>
-						<td>get.</td>
+						<td><%=request.getParameter("nom")%></td>
 					</tr>
 					<!-- Prenom -->
 					<tr class="prenom">
 						<td>Prenom:</td>
-						<td>(get.Prenom)</td>
+						<td><%=request.getParameter("prenom")%></td>
 					</tr>
 					<!-- Email -->
 					<tr class="email">
 						<td>Email:</td>
-						<td>(get.Email)</td>
+						<td><%=request.getParameter("email")%></td>
 					</tr>
 					<!-- Telephone -->
 					<tr class="telephone">
 						<td>Telephone:</td>
-						<td>(get.Telephone)</td>
+						<td><%=request.getParameter("telephone")%></td>
 					</tr>
 					<!-- Rue -->
 					<tr class="rue">
 						<td>Rue:</td>
-						<td>(get.Rue)</td>
+						<td><%=request.getParameter("rue")%></td>
 					</tr>
 					<!-- Code Postal -->
 					<tr class="codePostal">
 						<td>Code Postal:</td>
-						<td>(get.codePostal)</td>
+						<td><%=request.getParameter("codePostal")%></td>
 					</tr>
 					<!-- Ville -->
 					<tr class="ville">
 						<td>Ville:</td>
-						<td>(get.Ville)</td>
+						<td><%=request.getParameter("ville")%></td>
 					</tr>
 				</tbody>
 			</table>

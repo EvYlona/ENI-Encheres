@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 
 import fr.eni.javaee.ProjetEncheres.bo.Utilisateurs;
 
+
 public class UtilisateursDAOJdbcImpl implements UtilisateursDAO {
 
 	private static final String SELECT_BY_ID = "SELECT INTO UTILISATEURS(pseudo, nom, prenom, email, telephone, rue, code_postal, ville) VALUES(?,?,?,?,?,?,?,?);";
@@ -19,27 +20,47 @@ public class UtilisateursDAOJdbcImpl implements UtilisateursDAO {
 	// Méthode SelectById
 	@Override
 	public void SelectById(Utilisateurs utilisateurs) throws DALException {
-
-		try (Connection cnx = ConnectionProvider.getConnection()) {
-			// Getters and Setters
-			// On récupère les clés générées
-			PreparedStatement pstmt = cnx.prepareStatement(SELECT_BY_ID, PreparedStatement.RETURN_GENERATED_KEYS);
-			pstmt.setString(1, utilisateurs.getPseudo());
-			pstmt.setString(2, utilisateurs.getNom());
-			pstmt.setString(3, utilisateurs.getPrenom());
-			pstmt.setString(4, utilisateurs.getEmail());
-			pstmt.setString(5, utilisateurs.getTelephone());
-			pstmt.setString(6, utilisateurs.getRue());
-			pstmt.setString(7, utilisateurs.getCodePostal());
-			pstmt.setString(8, utilisateurs.getVille());
-			pstmt.executeUpdate();
-			ResultSet rs = pstmt.getGeneratedKeys();
-			if (rs.next()) {
-				utilisateurs.setNoUtilisateur(rs.getInt(1));
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
+		if(utilisateurs==null)
+		{
+			DALException businessException = new DALException();
+			businessException.ajouterErreur(ListeCodesErreurs.INSERT_OBJET_NULL);
+			throw businessException;
 		}
+
+		try (Connection cnx = ConnectionProvider.getConnection()) 
+		{
+			try{
+				// Getters and Setters
+				// On récupère les clés générées
+				cnx.setAutoCommit(false);
+				PreparedStatement pstmt = cnx.prepareStatement(SELECT_BY_ID, PreparedStatement.RETURN_GENERATED_KEYS);
+				pstmt.setString(1, utilisateurs.getPseudo());
+				pstmt.setString(2, utilisateurs.getNom());
+				pstmt.setString(3, utilisateurs.getPrenom());
+				pstmt.setString(4, utilisateurs.getEmail());
+				pstmt.setString(5, utilisateurs.getTelephone());
+				pstmt.setString(6, utilisateurs.getRue());
+				pstmt.setString(7, utilisateurs.getCodePostal());
+				pstmt.setString(8, utilisateurs.getVille());
+				pstmt.executeUpdate();
+				ResultSet rs = pstmt.getGeneratedKeys();
+				if (rs.next()) {
+					utilisateurs.setNoUtilisateur(rs.getInt(1));
+				}
+				rs.close();
+				pstmt.close();
+			 
+			}
+			catch (Exception e) 
+			{
+			e.printStackTrace();
+			}
+	
+	} catch (Exception e) {
+		DALException businessException = new DALException();
+		businessException.ajouterErreur(ListeCodesErreurs.INSERT_OBJET_ECHEC);
+		throw businessException;
+	}
 	}
 
 	// Méthode SelectByPseudo

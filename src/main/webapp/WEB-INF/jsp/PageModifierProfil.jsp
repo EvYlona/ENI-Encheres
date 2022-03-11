@@ -175,7 +175,7 @@ form .col-form-label {
 	<section>
 		<header class="row">
 			<div class="col-sm-12 col-lg-12">
-				<a href="PageListeEncheres"><h2 class="header1">Eni-Encheres</h2></a>
+				<a href="PageListeEncheres"> <h2 class= "Eni-Encheres"></h2></a>
 			</div>
 		</header>
 		<article class="col-xs-12">
