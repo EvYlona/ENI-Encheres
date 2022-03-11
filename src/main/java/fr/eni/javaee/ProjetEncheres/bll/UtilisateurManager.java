@@ -51,7 +51,7 @@ public class UtilisateurManager {
 	} else{
 		throw dalException;
 	}
-			return utilisateurDao;
+			return this.ajouterUtilisateur(pseudo, nom, prenom, email, telephone, rue, codePostal, ville, motDePasse, credit, administrateur);
 	}
 
 	private void validerMotDePasse(String motDePasse, DALException dalException) {
@@ -71,6 +71,18 @@ public class UtilisateurManager {
 		if (codePostal == null) {
 			dalException.ajouterErreur(ListeCodesErreurs.INSERT_CODE_POSTAL_NULL);
 		}
+	}
+
+	public Utilisateurs connexionUtilisateur (String pseudo, String motDePasse) throws DALException {
+			
+		Utilisateurs utilisateur = null;
+		utilisateur = new Utilisateurs();
+		utilisateur.setPseudo(pseudo);
+		utilisateur.setMotDePasse(motDePasse);
+		
+		this.utilisateurDao.SelectByPseudo(utilisateur);
+		
+		return utilisateur;
 		
 	}
 

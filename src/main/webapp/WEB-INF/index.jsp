@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -75,7 +75,7 @@ input[type=text] {
 
 img {
 	float: left;
-	width: 45vw;
+	width: 50vw;
 }
 
 h6 .title {
@@ -125,7 +125,7 @@ h6 .title {
 	}
 	
 	img {
-		width:35%;
+		width:45%;
 		float:left;
 		height:auto;
 		display:block;
@@ -228,20 +228,20 @@ h6 .title {
 			</div>
 			<div class="row bx">
 					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 box"><img
-						src="Ressources/image/test1.jpg" />
-						<h6 class="title">(get.NomArticle)</h6>
-						<p>(get.prix)</p>
-						<p>(get.finEncheres)</p>
-						<p>(get.adresseRetrait)</p>
-						<p>(get.vendeur)</p>
+						src="Ressources/image/dummy.jpeg" />
+						<h6 class="title">#######</h6>
+						<p>#######</p>
+						<p>##############</p>
+						<p>##############</p>
+						<p>##############</p>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 box"><img
-						src="Ressources/image/test1.jpg" />
-						<h6 class="title">(get.NomArticle)</h6>
-						<p>(get.prix)</p>
-						<p>(get.finEncheres)</p>
-						<p>(get.adresseRetrait)</p>
-						<p>(get.vendeur)</p>
+						src="Ressources/image/dummy.jpeg" />
+						<h6 class="title">#######</h6>
+						<p>##############</p>
+						<p>##############</p>
+						<p>##############</p>
+						<p>##############</p>
 					</div>
 			</div>
 		</article>

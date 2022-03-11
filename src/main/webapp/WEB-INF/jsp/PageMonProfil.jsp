@@ -27,13 +27,6 @@ a {
 	color: black;
 }
 
-.btn {
-	border-width: 2px;
-	border-style: solid;
-	border-color: black;
-	outline: none;
-}
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 	.container-fluid {
@@ -64,9 +57,9 @@ a {
 		height: 50px;
 		margin-top:20px;
 	}
-	.btn {
-		margin-left: 125px;
-	}
+	input {
+	margin-left:200px;
+}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -94,9 +87,6 @@ a {
 		height: 70px;
 		font-size: 2.5rem;
 	}
-	.btn {
-		margin-left: 200px;
-	}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -111,7 +101,7 @@ a {
 		width: 25vw;
 	}
 	.row-section {
-		font-size: 2.4rem;
+		font-size: 2rem;
 		width: 50vw;
 		margin-left: 15rem;
 		margin-top: -40px;
@@ -123,9 +113,10 @@ a {
 		font-size: 2.4rem;
 		height: 15em;
 	}
-	.btn {
-		margin-left: 150px;
-	}
+	
+	input {
+	float:right;
+}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -140,7 +131,7 @@ a {
 <body class="container-fluid">
 
 		
-	<header class="header"><a href="<%=request.getContextPath()%>/PageListeEncheres">Eni Enchères</a></header>
+	<header class="header"><a href="<%=request.getContextPath()%>/pageConnectee">Eni Enchères</a></header>
 	<br>
 	<!-- Haut de Page -->
 	<section class="row-section">
@@ -156,48 +147,80 @@ a {
 					<!-- Pseudo -->
 					<tr class="pseudo">
 						<td>Pseudo:</td>
+<<<<<<< HEAD
 						<td><%=request.getParameter("pseudo")%></td>
+=======
+						<td>################</td>
+>>>>>>> branch 'master' of https://github.com/EvYlona/ENI-Encheres.git
 					</tr>
 					<!-- Nom -->
 					<tr class="nom">
 						<td>Nom:</td>
+<<<<<<< HEAD
 						<td><%=request.getParameter("nom")%></td>
+=======
+						<td>################</td>
+>>>>>>> branch 'master' of https://github.com/EvYlona/ENI-Encheres.git
 					</tr>
 					<!-- Prenom -->
 					<tr class="prenom">
 						<td>Prenom:</td>
+<<<<<<< HEAD
 						<td><%=request.getParameter("prenom")%></td>
+=======
+						<td>################</td>
+>>>>>>> branch 'master' of https://github.com/EvYlona/ENI-Encheres.git
 					</tr>
 					<!-- Email -->
 					<tr class="email">
 						<td>Email:</td>
+<<<<<<< HEAD
 						<td><%=request.getParameter("email")%></td>
+=======
+						<td>################</td>
+>>>>>>> branch 'master' of https://github.com/EvYlona/ENI-Encheres.git
 					</tr>
 					<!-- Telephone -->
 					<tr class="telephone">
 						<td>Telephone:</td>
+<<<<<<< HEAD
 						<td><%=request.getParameter("telephone")%></td>
+=======
+						<td>################</td>
+>>>>>>> branch 'master' of https://github.com/EvYlona/ENI-Encheres.git
 					</tr>
 					<!-- Rue -->
 					<tr class="rue">
 						<td>Rue:</td>
+<<<<<<< HEAD
 						<td><%=request.getParameter("rue")%></td>
+=======
+						<td>################</td>
+>>>>>>> branch 'master' of https://github.com/EvYlona/ENI-Encheres.git
 					</tr>
 					<!-- Code Postal -->
 					<tr class="codePostal">
 						<td>Code Postal:</td>
+<<<<<<< HEAD
 						<td><%=request.getParameter("codePostal")%></td>
+=======
+						<td>################</td>
+>>>>>>> branch 'master' of https://github.com/EvYlona/ENI-Encheres.git
 					</tr>
 					<!-- Ville -->
 					<tr class="ville">
 						<td>Ville:</td>
+<<<<<<< HEAD
 						<td><%=request.getParameter("ville")%></td>
+=======
+						<td>################</td>
+>>>>>>> branch 'master' of https://github.com/EvYlona/ENI-Encheres.git
 					</tr>
 				</tbody>
 			</table>
 			<br>
 			<!-- Mon choix s'est porter sur un tableau en 2 colonne, les attributs et leurs valeurs. -->
-			<div class="row">
+			<div class="col-sm-12 col-lg-6">
 			
 				<a href="<%=request.getContextPath()%>/PageModifierProfil"><input type="button"
 						value="Modifier"/></a>

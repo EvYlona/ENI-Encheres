@@ -1,7 +1,12 @@
-<!DOCTYPE html>
-<html>
+<%@page import="fr.eni.javaee.ProjetEncheres.bo.Utilisateurs"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
 <!-- Bootstrap CSS -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -24,71 +29,118 @@
 </script>
 
 
-<title>Eni Enchères - Page Connexion</title>
+<title>Eni EnchÃ¨res - Page Connexion</title>
 
 
 <style>
+h2 a {
+	text-decoration: none;
+	color: black;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media ( max-width : 768px) {
+	h2 {
+		margin-bottom: 130px;
+		font-size: 3em;
+	}
+	.contenu {
+		padding: 20px;
+		font-size: .9em;
+		width: 100%;
+		text-align: justify;
+	}
+	.saisie {
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+	.check {
+		text-align: right;
+		margin-top: -50px;
+	}
+	.button2 {
+		margin-top: 40px;
+		text-align: center;
+	}
+	.saisie input {
+		float: right;
+	}
+}
+
+/* Desktop Device */
+@media ( min-width : 992px) {
+	h2 {
+		margin-bottom: 130px;
+		font-size: 3em;
+	}
+	.contenu {
+		font-size: 1.7em;
+		text-align: center;
+		width: 100%;
+	}
+	.saisie {
+		margin-bottom: 40px;
+	}
+	button {
+		height: 150px;
+		width: 80%;
+	}
+	.checkbox input {
+		margin-top: 20px;
+		margin-left: 40px;
+	}
+	.button2 {
+		margin-top: 70px;
+		width: 40%;
+		margin-left: 400px;
+	}
+	.saisie input {
+		float: right;
+		width: 30%;
+		margin-right: 300px;
+	}
+}
 </style>
 </head>
-<body class="container-fluid">
-		<header class="col-xs-12">
-			<div class="row">
-				<div class="col-sm-12 col-lg-6">
-					<h2 class="header1">Eni-Encheres</h2>
-				</div>
-			</div>
-		</header>
-		<div align="justify">
-			<!-- Ligne Principale -->
-			<div class="row">
-				<div class="col align-self-center">
-					<!-- Les quatres ligne de connexion -->
-					<div class="row" align="center">
-						<!-- Identifiant -->
-						<div class="col-6" align="right">Identifiant:</div>
-						<div class="col-6" align="justify">
-							<input type="text" class="form-control" placeholder="Identifiant"
-								aria-label="identifiant" style="width: 300px;">
-						</div>
-					</div>
-					<br>
-					<div class="row" align="center">
-						<div class="col-6" align="right">Mot De Passe:</div>
-						<div class="col-6" align="justify">
-							<input type="text" class="form-control" placeholder="MotDePasse"
-								aria-label="mdp" style="width: 300px;">
-						</div>
-					</div>
-					<br>
-					<div class="row" align="right">
-						<div class="col-6">
-							<a href="PageListeEncheres"><button type="button" class="btn btn-light">Connexion</button></a>
-						</div>
-						<div class="col-6">
-							<div class="row" align="justify">
-								<div class="form-check">
-									<input class="form-check-input" type="checkbox" value=""
-										id="flexCheckDefault"> <label class="form-check-label"
-										for="flexCheckDefault">Se souvenir de moi</label>
-								</div>
-							</div>
-							<div class="row" align="justify">
-								<a href="/index.jsp">Mot de passe oublié</a>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-4 offset-4" align="center">
-								<a href="pageCreerCompte"
-									<button type="button" class="btn btn-light">
-								Creer un compte</button>></a>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-			</div>
-
+<body class="container">
+	<div class="row">
+		<div class="col-sm-12 col-lg-6">
+			<h2>
+				<a href="<%=request.getContextPath()%>/index">Eni-Encheres</a>
+			</h2>
 		</div>
+	</div>
+	<div class="contenu">
+		<form action="pageConnexion" method="post">
+			<div class="saisie">
+				<label for="pseudo">Identifiant:</label> <input type=text
+					name="pseudo" value="<%=request.getParameter("pseudo")%>" autofocus />
+			</div>
+			<div class="saisie">
+				<label for="motDePasse">Mot de passe:</label> <input type=text
+					name="motdepasse" value="<%=request.getParameter("motdepasse")%>" />
+			</div>
+			<!-- Bouton Connexion -->
+			<div class="row">
+				<div class="button1 col-lg-6 col-lg-offset-3">
+					<a href="pageConnectee"><button type="submit" class="btn-lg">Connexion</button></a>
+				</div>
+				<div class="check col-sm-6 col-lg-3 ">
+					<span><input type="checkbox" name="save">Se souvenir
+						de moi</span>
+					<p>
+						<a href="<%=request.getContextPath()%>"> Mot de Passe oubliÃ©</a>
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="button2 col-lg-12">
+					<a href="pageCreationCompte"><button type="button"
+							class="btn-lg">Creer un compte</button></a>
+				</div>
+			</div>
+		</form>
+	</div>
+
 </body>
 </html>

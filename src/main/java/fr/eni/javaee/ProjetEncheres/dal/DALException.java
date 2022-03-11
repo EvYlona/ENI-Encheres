@@ -30,8 +30,8 @@ public class DALException extends Exception {
 	}
 		
 	//Gérer l'erreur
-	public List<Integer> hasErreurs() {
-		return this.listeCodesErreurs;
+	public boolean hasErreurs() {
+		return this.listeCodesErreurs.size()>0;
 	}
 
 	
