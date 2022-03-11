@@ -93,6 +93,10 @@
 	fieldset {
 		border: 3px solid #000;
 	}
+	
+	.img_upload {
+		width:100%;
+	}
 	/* Large devices (large desktops, 1200px and up) */
 	@media ( min-width : 1200px) {
 		.form-group {
@@ -149,7 +153,7 @@
 
 			<div class="row_reverse">
 				<div class="col-sm-12 col-lg-3">
-					<img alt="test" src="Ressources/image/test1.jpg" class="img_upload"
+					<img alt="test" src="Ressources/image/dummy.jpeg" class="img_upload"
 						style="float: left;">
 				</div>
 				<form>
@@ -228,9 +232,9 @@
 				<form>
 					<div class="row bouton">
 						<div class="col-sm-12">
-							<a href="PageListeEncheres">
-								<button type="button" class="btn-lg">Enregistrer</button>
-							</a> <a href="PageListeEncheres.">
+							<a href="<%=request.getContextPath()%>/pageConnectee">
+								<button type="submit" class="btn-lg">Enregistrer</button>
+							</a> <a href="<%=request.getContextPath()%>/pageConnectee">
 								<button type="button" class="btn-lg">Annuler</button>
 							</a>
 						</div>

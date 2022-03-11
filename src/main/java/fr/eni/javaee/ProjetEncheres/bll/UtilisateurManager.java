@@ -1,6 +1,7 @@
 package fr.eni.javaee.ProjetEncheres.bll;
 
 import fr.eni.javaee.ProjetEncheres.bo.Utilisateurs;
+import fr.eni.javaee.ProjetEncheres.dal.DALException;
 import fr.eni.javaee.ProjetEncheres.dal.DAOFactory;
 import fr.eni.javaee.ProjetEncheres.dal.UtilisateursDAO;
 
@@ -35,6 +36,21 @@ public class UtilisateurManager {
 		return utilisateur;
 		
 	}
+	
+	public Utilisateurs connexionUtilisateur (String pseudo, String motDePasse) throws DALException {
+			
+		Utilisateurs utilisateur = null;
+		utilisateur = new Utilisateurs();
+		utilisateur.setPseudo(pseudo);
+		utilisateur.setMotDePasse(motDePasse);
+		
+		this.utilisateurDao.SelectByPseudo(utilisateur);
+		
+		return utilisateur;
+		
+	}
+	
+	
 	
 	
 		

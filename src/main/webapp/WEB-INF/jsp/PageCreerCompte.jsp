@@ -229,21 +229,22 @@ form .col-form-label {
 			<div class="col-sm-12 col-lg-6">
 				<label for="Password" class="col-form-label">Mot de Passe:</label> <input
 					type="password" name="password" class="form-group"
-					value="<%=request.getParameter("password")%>">
+					value="<%=request.getParameter("password")%>" maxlength="13" required>
 			</div>
 
 			<!-- Pseudo -->
 			<div class="col-sm-12 col-lg-6">
 				<label for="Password" class="col-form-label">Confirmation:</label> <input
 					type="password" name="password" class="form-group"
-					value="<%=request.getParameter("password")%>">
+					value="<%=request.getParameter("password")%>" maxlength="13" required>
 			</div>
 
 			<!-- Bouton -->
 			<div class="row bouton">
 				<div class="col-sm-12">
-					<a href="<%=request.getContextPath()%>/pageConnectee"><input type="submit"
-							></button></a> <a href="/index.jsp"><button
+					<a href="<%=request.getContextPath()%>/pageConnectee"><button type="submit"
+						class="btn-lg">Créer</button></a> 
+						<a href="<%=request.getContextPath()%>/index"><button
 							type="button" class="btn-lg">Annuler</button></a>
 				</div>
 			</div>

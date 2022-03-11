@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -186,16 +189,16 @@ h6 .title {
 					<div class="row no-gutters"
 						style="font-size: 0.73rem; display: flex; justify-content: space-around;">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
-							<a href="PageEncherir">Enchères</a>
+							<a href="">EnchÃ¨res</a>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
-							<a href="PageVendreUnArticle">Vendre un article</a>
+							<a href="<%=request.getContextPath()%>/PageVendreUnArticle">Vendre un article</a>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
-							<a href="PageMonProfil">Mon profil</a>
+							<a href="<%=request.getContextPath()%>/PageMonProfil">Mon profil</a>
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
-							<a href="index.html">Deconnexion</a>
+							<a href="<%=request.getContextPath()%>/index">Deconnexion</a>
 						</div>
 					</div>
 				</div>
@@ -203,8 +206,10 @@ h6 .title {
 
 			<div class="row">
 				<div class="col-lg-6 d-none d-md-block">
-					<h3 class="header3">Liste des enchères</h3>
-					<h3 class="col-lg-6 offset-3" style="float:right;">est connecté</h3>
+					<h3 class="header3">Liste des enchÃ¨res</h3>
+				</div>
+				<div class="col-lg-3 offset-4">
+					<p>
 				</div>
 			</div>
 		</header>
@@ -227,18 +232,18 @@ h6 .title {
 								<div class="form-check">
 									<input class="form-check-input" type="checkbox" value=""
 										id="flexCheckDefault"> <label class="form-check-label"
-										for="flexCheckDefault"> Mes enchères ouvertes </label>
+										for="flexCheckDefault"> Mes enchÃ¨res ouvertes </label>
 								</div>
 								<div class="form-check">
 									<input class="form-check-input" type="checkbox" value=""
 										id="flexCheckDefault"> <label class="form-check-label"
-										for="flexCheckDefault"> Mes enchères en cours </label>
+										for="flexCheckDefault"> Mes enchÃ¨res en cours </label>
 								</div>
 								<div class="form-check">
 									<input class="form-check-input" type="checkbox" value="disabled"
 										id="flexCheckChecked" checked> <label
 										class="form-check-label" for="flexCheckChecked"> Mes
-										enchères remportées </label>
+										enchÃ¨res remportÃ©es </label>
 								</div>
 							</fieldset>
 						</div>
@@ -258,13 +263,13 @@ h6 .title {
 								<div class="form-check">
 									<input class="form-check-input" type="checkbox" value=""
 										id="flexCheckDefault"> <label class="form-check-label"
-										for="flexCheckDefault"> Ventes non debutée </label>
+										for="flexCheckDefault"> Ventes non debutÃ©e </label>
 								</div>
 								<div class="form-check">
 									<input class="form-check-input" type="checkbox" value=""
 										id="flexCheckChecked" checked> <label
 										class="form-check-label" for="flexCheckChecked"> Vente
-										terminée </label>
+										terminÃ©e </label>
 								</div>
 							</fieldset>
 						</div>
@@ -282,7 +287,7 @@ h6 .title {
 									<option value="first">Informatique</option>
 									<option value="second">Ameublement</option>
 									<option value="third">Vetement</option>
-									<option value="fourth">Sport & loisirs</option>
+									<option value="fourth">Sport '&' loisirs</option>
 							</select></td>
 						<tr>
 					</tbody>
@@ -298,21 +303,20 @@ h6 .title {
 				<button type="button" class="btn-lg"
 					style="font-size: 20px; width: 100%; height: 80px;">Rechercher</button>
 			</div>
-			</div>
 			<div class="row bx">
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 box">
-					<img src="Ressources/image/test1.jpg" />
-					<h6 class="title">(get.NomArticle)</h6>
-					<p>(get.prix)</p>
-					<p>(get.finEncheres)</p>
-					<p>(get.vendeur)</p>
+					<img src="Ressources/image/dummy.jpeg" />
+					<h6 class="title">##############</h6>
+					<p>##############</p>
+					<p>##############</p>
+					<p>##############</p>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 box">
-					<img src="Ressources/image/test1.jpg" />
-					<h6 class="title">(get.NomArticle)</h6>
-					<p>(get.prix)</p>
-					<p>(get.finEncheres)</p>
-					<p>(get.vendeur)</p>
+					<img src="Ressources/image/dummy.jpeg" />
+					<h6 class="title">##############</h6>
+					<p>##############</p>
+					<p>##############</p>
+					<p>##############</p>
 				</div>
 			</div>
 		</article>

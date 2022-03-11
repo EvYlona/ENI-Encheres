@@ -26,7 +26,10 @@
 
 <title>Eni Enchères - Modifier son Profil</title>
 <style>
-
+a {
+	text-decoration: none;
+	color: black;
+}
 /* Mobile First */
 .header1 {
 	margin-top: 15px;
@@ -175,7 +178,7 @@ form .col-form-label {
 	<section>
 		<header class="row">
 			<div class="col-sm-12 col-lg-12">
-				<a href="PageListeEncheres"><h2 class="header1">Eni-Encheres</h2></a>
+				<h2 class="header1"><a href="<%=request.getContextPath()%>/pageConnectee">Eni-Encheres</a></h2>
 			</div>
 		</header>
 		<article class="col-xs-12">
@@ -186,56 +189,56 @@ form .col-form-label {
 				<!-- Pseudo -->
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 					<label for="pseudo" class="col-form-label">Pseudo:</label> <input
-						type="text" id="pseudo" class="form-group">
+						type="text" class="form-group">
 				</div>
 				<!-- Nom -->
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 					<label for="nom" class="col-form-label">Nom:</label> <input
-						type="password" id="nom" class="form-group">
+						type="password"  class="form-group">
 				</div>
 				<!-- Prenom -->
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 					<label for="prenom" class="col-form-label">Prenom:</label> <input
-						type="text" id="prenom" class="form-group">
+						type="text"  class="form-group">
 				</div>
 				<!-- Email -->
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 					<label for="email" class="col-form-label">Email:</label> <input
-						type="email" id="email" class="form-group">
+						type="email"  class="form-group">
 				</div>
 				<!-- Telephone -->
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 					<label for="telephone" class="col-form-label">Telephone:</label> <input
-						type="text" id="telephone" class="form-group">
+						type="text"  class="form-group">
 				</div>
 				<!-- Rue -->
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 					<label for="rue" class="col-form-label">Rue</label> <input
-						type="text" id="rue" class="form-group">
+						type="text"  class="form-group">
 				</div>
 				<!-- Code Postal -->
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 					<label for="codePostal" class="col-form-label">Code Postal:</label>
-					<input type="text" id="codepostal" class="form-group">
+					<input type="text" class="form-group">
 				</div>
 
 				<!-- Ville -->
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 					<label for="ville" class="col-form-label">Ville:</label> <input
-						type="text" id="ville" class="form-group">
+						type="text"  class="form-group">
 				</div>
 
 				<!-- Mot de passe ACTUEL -->
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 					<label for="Password" class="col-form-label">Mot de passe
-						actuel:</label> <input type="password" id="Password" class="form-group">
+						actuel:</label> <input type="password"  class="form-group">
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 				</div>
 				<!-- Mot de passe -->
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 					<label for="Password" class="col-form-label">Nouveau mot de
-						passe:</label> <input type="password" id="NewPassword" class="form-group">
+						passe:</label> <input type="password" class="form-group">
 				</div>
 
 				<!-- Confirmation -->
@@ -247,7 +250,7 @@ form .col-form-label {
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6"
 					style="margin-top: 20px;">
 					<span class="col-form-label">Crédit:</span> <span
-						class="form-group" style="border: none; font-size:1.2rem;">(get.Credit)</span>
+						class="form-group" style="border: none; font-size:1.2rem;">########</span>
 				</div>
 
 			</form>
@@ -255,9 +258,9 @@ form .col-form-label {
 			<!-- Bouton -->
 			<div class="row bouton">
 				<div class="col-xs-12 col-sm-12">
-					<a href="PageListeEncheres"><button type="button" class="btn-sm">Enregistrer</button></a>
-					<a href="index.html"><button type="button" class="btn-md">Supprimer
-							mon compte</button></a> <a href="PageListeEncheres"><button type="button"
+					<a href="<%=request.getContextPath()%>/pageConnectee"><button type="submit" class="btn-sm">Enregistrer</button></a>
+					<a href="<%=request.getContextPath()%>/index"><button type="submit" class="btn-md">Supprimer
+							mon compte</button></a> <a href="<%=request.getContextPath()%>/pageConnectee"><button type="button"
 							class="btn-sm">Retour</button></a>
 
 				</div>

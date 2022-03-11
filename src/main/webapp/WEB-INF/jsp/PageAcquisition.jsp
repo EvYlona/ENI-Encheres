@@ -139,7 +139,7 @@
 	<section>
 		<header class="row">
 			<div class="col-sm-12 col-lg-12">
-				<h2 class="header1">Eni-Encheres</h2>
+				<h2 class="header1"><a href="<%=request.getContextPath()%>/pageConnectee">Eni-Encheres</a></h2>
 			</div>
 		</header>
 	</section>
@@ -165,27 +165,27 @@
 			<div class="row">
 				<div class="col-sm-12 col-lg-8">
 					<p class="text1" style="float: left;">Meilleur offre:</p>
-					<p class="text2">(get.offreValue)</p>
+					<p class="text2">#########</p>
 				</div>
 				<div class="col-sm-12 col-lg-8">
 					<p class="text1" style="float: left;">Mise à prix:</p>
-					<p class="text2" >(get.mapValue)</p>
+					<p class="text2" >#########</p>
 				</div>
 				<div class="col-sm-12 col-lg-8">
 					<fieldset>
 						<legend class="d-sm-none w-auto">Retrait</legend>
 						<p class="d-none d-md-block text1" style="float: left;">Retrait:</p>
-						<p class="text3">(get.adresse)</p>
-						<p class="text3">(get.code Postal) (get.ville)</p>
+						<p class="text3">#########</p>
+						<p class="text3">######### (#########</p>
 						<p class="text5" style="float: left;">Vendeur:</p>
-						<p class="text3">(get.vendeur)</p>
+						<p class="text3">#########</p>
 						<p class="text5" style="float: left;">Tel:</p>
-						<p class="text3">(get.num)</p>
+						<p class="text3">#########</p>
 					</fieldset>
 				</div>
 
 				<div class="col-sm-12 col-lg-8">
-					<a href="PageListeEncheres">
+					<a href="<%=request.getContextPath()%>/pageConnectee">
 						<button type="button" class="btn-lg">Retrait effectué</button>
 					</a>
 				</div>
